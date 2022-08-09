@@ -44,10 +44,6 @@
       .cardhover-cs:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
-      .map-cs {
-        width: 100%;
-        height: 320px;
-      }
       .card-link-btn-info-cs:hover {
         background-color: rgba(0, 255, 255, 0.5);
         color: whitesmoke !important;
@@ -56,19 +52,31 @@
         background-color: rgba(255, 160, 40, 0.8);
         color: white !important;
       }
-      /* To center Footer's text */
+      .map-cs {
+        width: 100%;
+        height: 35vh;
+      }
+      /* Client cards button margin on small size */
+      @media screen and (max-width: 576px) {
+        .client-card-margin {
+          margin-right: 5px !important;
+        }
+      }
+      /* To center footer's text */
       p:last-child {
         margin: 0;
-        padding: 0;
+        padding: 15px;
       }
     </style>
   </head>
 
   <body>
     <!-- Start Header Section -->
-    <header>
+    <header id="home">
       <!-- Start Navbar -->
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <nav
+        class="navbar text-center navbar-expand-md bg-dark navbar-dark fixed-top"
+      >
         <a href="index.html" class="navbar-brand mx-3">
           <img
             src="https://icon-library.com/images/icon-logo-png/icon-logo-png-11.jpg"
@@ -79,7 +87,7 @@
         </a>
         <button
           type="button"
-          class="navbar-toggler"
+          class="navbar-toggler me-3 px-2"
           data-bs-toggle="collapse"
           data-bs-target="#nav"
         >
@@ -103,23 +111,15 @@
                 Clients
               </a>
             </li>
-            <li class="nav-item">
-              <a
-                href="#about"
-                class="nav-link text-uppercase text-light fw-bold"
-              >
-                About
-              </a>
-            </li>
             <li class="nav-item dropdown">
               <a
-                href="#"
+                href="#app"
                 class="nav-link text-uppercase text-light fw-bold dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
                 Software
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu text-center">
                 <li>
                   <a href="#android-app" class="dropdown-item">Android App</a>
                 </li>
@@ -136,6 +136,14 @@
                   <a href="#mac-app" class="dropdown-item">MacOS App</a>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#about"
+                class="nav-link text-uppercase text-light fw-bold"
+              >
+                About
+              </a>
             </li>
             <li>
               <a
@@ -154,7 +162,7 @@
               </a>
             </li>
           </ul>
-          <div class="px-3">
+          <div class="px-3 my-1">
             <button type="button" class="btn btn-outline-light btn-sm">
               Sign up
             </button>
@@ -168,12 +176,6 @@
         <div class="container-fluid">
           <div class="row justify-content-center align-items-center banner-cs">
             <div class="col-md-10 text-center">
-              <!-- <h1 class="text-capitalize">
-                <span class="text-primary fw-bold display-2">PTT</span>
-                <span class="text-light display-4"
-                  >software development company:</span
-                >
-              </h1> -->
               <h1 class="text-capitalize">
                 <span class="text-primary fw-bold display-2">
                   PTT
@@ -206,11 +208,11 @@
     <!-- End Header Section -->
 
     <!-- Start Clients Section -->
-    <section class="bg-light p-3">
+    <section id="clients" class="bg-light p-2 pt-3 p-lg-1 pt-lg-2">
       <div class="container-fluid">
         <!-- Start Title -->
         <div class="col-12 text-center">
-          <h3 class="text-warning display-3">Our Clients</h3>
+          <h3 class="text-warning display-3 mb-0">Our Clients</h3>
           <p class="text-muted lead">
             Projects We Successfully Developed. One look is worth a thousand
             words.
@@ -232,7 +234,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -259,7 +261,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -286,7 +288,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -313,7 +315,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-info-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -342,7 +344,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -371,7 +373,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -384,6 +386,7 @@
               </div>
             </div>
           </div>
+
           <!-- Sony -->
           <div class="col-md-3 col-sm-6 mb-4">
             <div class="card bg-warning cardhover-cs">
@@ -399,7 +402,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -428,7 +431,7 @@
                 </p>
                 <a
                   href="#"
-                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2"
+                  class="d-sm-grid d-lg-inline card-link btn btn-outline-secondary text-muted card-link-btn-warning-cs mx-auto mb-2 me-lg-2 client-card-margin"
                 >
                   Website
                 </a>
@@ -442,17 +445,17 @@
             </div>
           </div>
         </div>
-        <hr />
+        <div class="divider"></div>
       </div>
     </section>
     <!-- End Clients Section -->
 
-    <!-- Start Apps Section -->
-    <section>
+    <!-- Start Software Section -->
+    <section id="app">
       <div class="container-fluid">
         <!-- Start Title -->
         <div class="col-12 text-center">
-          <h1 class="text-warning display-3">Our Software</h1>
+          <h1 class="text-warning display-3 mb-0">Our Software</h1>
           <p class="text-muted lead">
             We design any interfaces for different types of projects and
             devices.
@@ -460,15 +463,15 @@
         </div>
         <!-- End Title -->
 
-        <div class="row text-center">
+        <div class="row text-center mb-2">
           <!-- Android Application -->
-          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto mb-3">
             <img
               src="https://st1.bgr.in/wp-content/uploads/2018/10/android-green-lego-poster-googleblog.jpg"
               alt="Android App"
               class="img-thumbnail"
             />
-            <h3 class="text-warning my-3">Android Application</h3>
+            <h3 class="text-warning mt-2 mb-0">Android Application</h3>
             <p class="text-muted">
               Lorem Ipsum is the simply dummy text of the printing and
               typesetting industry.
@@ -476,13 +479,13 @@
           </div>
 
           <!-- iOS Application -->
-          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto mb-3">
             <img
               src="https://mytechmyanmar.com/wp-content/uploads/2020/04/appstore.jpg"
               alt="iOS App"
               class="img-thumbnail"
             />
-            <h3 class="text-warning my-3">iOS Application</h3>
+            <h3 class="text-warning mt-2 mb-0">iOS Application</h3>
             <p class="text-muted">
               Lorem Ipsum is the simply dummy text of the printing and
               typesetting industry.
@@ -490,13 +493,13 @@
           </div>
 
           <!-- Linux Application -->
-          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto">
+          <div class="col-lg-3 col-md-6 col-sm-12 mx-auto mb-3">
             <img
               src="https://i.ytimg.com/vi/8WbyB_2HthM/maxresdefault.jpg"
               alt="Linux App"
               class="img-thumbnail"
             />
-            <h3 class="text-warning my-3">Linux Application</h3>
+            <h3 class="text-warning mt-2 mb-0">Linux Application</h3>
             <p class="text-muted">
               Lorem Ipsum is the simply dummy text of the printing and
               typesetting industry.
@@ -510,7 +513,7 @@
               alt="Windows App"
               class="img-thumbnail"
             />
-            <h3 class="text-warning my-3">Windows Application</h3>
+            <h3 class="text-warning mt-2 mb-0">Windows Application</h3>
             <p class="text-muted">
               Lorem Ipsum is the simply dummy text of the printing and
               typesetting industry.
@@ -519,15 +522,15 @@
         </div>
       </div>
     </section>
-    <!-- End Apps Section -->
+    <!-- End Software Section -->
 
     <!-- Start Team Section -->
-    <section class="bg-secondary p-3">
+    <section id="about" class="bg-secondary p-3">
       <div class="container-fluid">
         <!-- Start Title -->
         <div class="col-12 text-center mb-4">
-          <h1 class="text-warning display-3">Our Team</h1>
-          <p class="text-light text-opacity-75">
+          <h1 class="text-warning display-3 mb-0">Our Team</h1>
+          <p class="text-light text-opacity-75 pb-0">
             We have the strong team to work your desires best.
           </p>
         </div>
@@ -653,8 +656,8 @@
       <div class="container-fluid">
         <!-- Start Title -->
         <div class="col-12 text-center mb-4">
-          <h3 class="text-warning display-3">Public Interest</h3>
-          <p class="text-muted lead">
+          <h3 class="text-warning display-3 mb-0">Public Interest</h3>
+          <p class="text-muted lead pb-0">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </p>
@@ -743,8 +746,8 @@
     <section id="pricing" class="bg-secondary p-4">
       <!-- Start Title -->
       <div class="col-12 text-center">
-        <h3 class="text-warning display-3">Pricing</h3>
-        <p class="text-light lead">
+        <h3 class="text-warning display-3 mb-0">Pricing</h3>
+        <p class="text-light lead pb-4">
           Lorem Ipsum is the simply dummy text of the printing and typesetting
           industry.
         </p>
@@ -840,11 +843,11 @@
     <!-- End Pricing Section -->
 
     <!-- Start Contact Section -->
-    <section>
+    <section id="contact">
       <div class="container-fluid">
         <!-- Start Title -->
-        <div class="col-12 text-center mt-3">
-          <h3 class="text-warning display-3">Contact Us</h3>
+        <div class="col-12 text-center my-3">
+          <h3 class="text-warning display-3 mb-0">Contact Us</h3>
           <p>We always welcome your request and requirements.</p>
         </div>
         <!-- End Title -->
